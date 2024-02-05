@@ -1,0 +1,184 @@
+// Copyright Epic Games, Inc. All Rights Reserved.
+/*===========================================================================
+	Generated code exported from UnrealHeaderTool.
+	DO NOT modify this manually! Edit the corresponding .h files instead!
+===========================================================================*/
+
+// IWYU pragma: private, include "RuntimeProcessLauncher.h"
+#include "UObject/ObjectMacros.h"
+#include "UObject/ScriptMacros.h"
+
+PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class URuntimeProcessManager;
+#ifdef RUNTIMEPROCESSLAUNCHER_RuntimeProcessLauncher_generated_h
+#error "RuntimeProcessLauncher.generated.h already included, missing '#pragma once' in RuntimeProcessLauncher.h"
+#endif
+#define RUNTIMEPROCESSLAUNCHER_RuntimeProcessLauncher_generated_h
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_SPARSE_DATA
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_RPC_WRAPPERS
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_RPC_WRAPPERS_NO_PURE_DECLS
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_ACCESSORS
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesURuntimeProcessLauncher(); \
+	friend struct Z_Construct_UClass_URuntimeProcessLauncher_Statics; \
+public: \
+	DECLARE_CLASS(URuntimeProcessLauncher, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/RuntimeProcessLauncher"), NO_API) \
+	DECLARE_SERIALIZER(URuntimeProcessLauncher)
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_INCLASS \
+private: \
+	static void StaticRegisterNativesURuntimeProcessLauncher(); \
+	friend struct Z_Construct_UClass_URuntimeProcessLauncher_Statics; \
+public: \
+	DECLARE_CLASS(URuntimeProcessLauncher, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/RuntimeProcessLauncher"), NO_API) \
+	DECLARE_SERIALIZER(URuntimeProcessLauncher)
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API URuntimeProcessLauncher(const FObjectInitializer& ObjectInitializer); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(URuntimeProcessLauncher) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, URuntimeProcessLauncher); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(URuntimeProcessLauncher); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API URuntimeProcessLauncher(URuntimeProcessLauncher&&); \
+	NO_API URuntimeProcessLauncher(const URuntimeProcessLauncher&); \
+public: \
+	NO_API virtual ~URuntimeProcessLauncher();
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_ENHANCED_CONSTRUCTORS \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API URuntimeProcessLauncher(URuntimeProcessLauncher&&); \
+	NO_API URuntimeProcessLauncher(const URuntimeProcessLauncher&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, URuntimeProcessLauncher); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(URuntimeProcessLauncher); \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(URuntimeProcessLauncher) \
+	NO_API virtual ~URuntimeProcessLauncher();
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_21_PROLOG
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_SPARSE_DATA \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_RPC_WRAPPERS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_ACCESSORS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_INCLASS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_SPARSE_DATA \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_ACCESSORS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_INCLASS_NO_PURE_DECLS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_24_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> RUNTIMEPROCESSLAUNCHER_API UClass* StaticClass<class URuntimeProcessLauncher>();
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_SPARSE_DATA
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execDestroyProcessManager); \
+	DECLARE_FUNCTION(execCreateProcessManager);
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execDestroyProcessManager); \
+	DECLARE_FUNCTION(execCreateProcessManager);
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_ACCESSORS
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_INCLASS_NO_PURE_DECLS \
+private: \
+	static void StaticRegisterNativesURuntimeProcessBlueprintFunctionLibrary(); \
+	friend struct Z_Construct_UClass_URuntimeProcessBlueprintFunctionLibrary_Statics; \
+public: \
+	DECLARE_CLASS(URuntimeProcessBlueprintFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/RuntimeProcessLauncher"), NO_API) \
+	DECLARE_SERIALIZER(URuntimeProcessBlueprintFunctionLibrary)
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_INCLASS \
+private: \
+	static void StaticRegisterNativesURuntimeProcessBlueprintFunctionLibrary(); \
+	friend struct Z_Construct_UClass_URuntimeProcessBlueprintFunctionLibrary_Statics; \
+public: \
+	DECLARE_CLASS(URuntimeProcessBlueprintFunctionLibrary, UBlueprintFunctionLibrary, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/RuntimeProcessLauncher"), NO_API) \
+	DECLARE_SERIALIZER(URuntimeProcessBlueprintFunctionLibrary)
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_STANDARD_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API URuntimeProcessBlueprintFunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(URuntimeProcessBlueprintFunctionLibrary) \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, URuntimeProcessBlueprintFunctionLibrary); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(URuntimeProcessBlueprintFunctionLibrary); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API URuntimeProcessBlueprintFunctionLibrary(URuntimeProcessBlueprintFunctionLibrary&&); \
+	NO_API URuntimeProcessBlueprintFunctionLibrary(const URuntimeProcessBlueprintFunctionLibrary&); \
+public: \
+	NO_API virtual ~URuntimeProcessBlueprintFunctionLibrary();
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_ENHANCED_CONSTRUCTORS \
+	/** Standard constructor, called after all reflected properties have been initialized */ \
+	NO_API URuntimeProcessBlueprintFunctionLibrary(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+private: \
+	/** Private move- and copy-constructors, should never be used */ \
+	NO_API URuntimeProcessBlueprintFunctionLibrary(URuntimeProcessBlueprintFunctionLibrary&&); \
+	NO_API URuntimeProcessBlueprintFunctionLibrary(const URuntimeProcessBlueprintFunctionLibrary&); \
+public: \
+	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, URuntimeProcessBlueprintFunctionLibrary); \
+	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(URuntimeProcessBlueprintFunctionLibrary); \
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(URuntimeProcessBlueprintFunctionLibrary) \
+	NO_API virtual ~URuntimeProcessBlueprintFunctionLibrary();
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_47_PROLOG
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_GENERATED_BODY_LEGACY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_SPARSE_DATA \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_RPC_WRAPPERS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_ACCESSORS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_INCLASS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_STANDARD_CONSTRUCTORS \
+public: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+#define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_GENERATED_BODY \
+PRAGMA_DISABLE_DEPRECATION_WARNINGS \
+public: \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_SPARSE_DATA \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_ACCESSORS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_INCLASS_NO_PURE_DECLS \
+	FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h_50_ENHANCED_CONSTRUCTORS \
+private: \
+PRAGMA_ENABLE_DEPRECATION_WARNINGS
+
+
+template<> RUNTIMEPROCESSLAUNCHER_API UClass* StaticClass<class URuntimeProcessBlueprintFunctionLibrary>();
+
+#undef CURRENT_FILE_ID
+#define CURRENT_FILE_ID FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessLauncher_h
+
+
+PRAGMA_ENABLE_DEPRECATION_WARNINGS

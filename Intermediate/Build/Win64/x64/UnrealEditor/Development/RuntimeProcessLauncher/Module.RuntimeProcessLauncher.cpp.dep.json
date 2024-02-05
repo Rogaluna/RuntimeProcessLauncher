@@ -1,0 +1,36 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\runtimeprocesslauncher\\module.runtimeprocesslauncher.cpp",
+        "ProvidedModule": "",
+        "PCH": "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\engine\\sharedpch.engine.shadowerrors.inclorderunreal5_1.h.pch",
+        "Includes": [
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\runtimeprocesslauncher\\definitions.runtimeprocesslauncher.h",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\intermediate\\build\\win64\\unrealeditor\\inc\\runtimeprocesslauncher\\uht\\runtimeprocesslauncher.gen.cpp",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\source\\runtimeprocesslauncher\\public\\runtimeprocesslauncher.h",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\intermediate\\build\\win64\\unrealeditor\\inc\\runtimeprocesslauncher\\uht\\runtimeprocesslauncher.generated.h",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\intermediate\\build\\win64\\unrealeditor\\inc\\runtimeprocesslauncher\\uht\\runtimeprocesslauncher.init.gen.cpp",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\intermediate\\build\\win64\\unrealeditor\\inc\\runtimeprocesslauncher\\uht\\runtimeprocessmanager.gen.cpp",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\source\\runtimeprocesslauncher\\public\\runtimeprocessmanager.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\coreuobject\\public\\uobject\\noexporttypes.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\core\\public\\math\\unitconversion.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\core\\public\\math\\unitconversion.inl",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\core\\public\\internationalization\\polyglottextdata.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\intermediate\\build\\win64\\unrealeditor\\inc\\runtimeprocesslauncher\\uht\\runtimeprocessmanager.generated.h",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\source\\runtimeprocesslauncher\\private\\runtimeprocesslauncher.cpp",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\source\\runtimeprocesslauncher\\private\\runtimeprocessmanager.cpp",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\sockets\\public\\socketsubsystem.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\sockets\\public\\addressinfotypes.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\networking\\public\\interfaces\\ipv4\\ipv4address.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\networking\\public\\interfaces\\ipv4\\ipv4subnetmask.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\networking\\public\\interfaces\\ipv4\\ipv4endpoint.h",
+            "z:\\xediasoftware\\tool\\unrealengine\\ue5.2.1\\engine\\source\\runtime\\sockets\\public\\sockets.h",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\source\\runtimeprocesslauncher\\public\\socketlistener.h",
+            "z:\\xediadocument\\project\\unreal\\5.2\\plugindev\\plugins\\runtimeprocesslauncher\\source\\runtimeprocesslauncher\\private\\socketlistener.cpp"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
