@@ -1,13 +1,5 @@
 {
 	"RemapUnityFiles": 
 	{
-		"Module.RuntimeProcessLauncher.cpp.obj": [
-			"RuntimeProcessLauncher.gen.cpp.obj",
-			"RuntimeProcessLauncher.init.gen.cpp.obj",
-			"RuntimeProcessManager.gen.cpp.obj",
-			"RuntimeProcessLauncher.cpp.obj",
-			"RuntimeProcessManager.cpp.obj",
-			"SocketListener.cpp.obj"
-		]
 	}
 }
