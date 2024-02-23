@@ -49,7 +49,6 @@ protected:
     FString Url;
     FString Params;
 
-    uint8 IsIndependentProcess : 1;
     uint8 bReceive : 1;
 
     // operate
@@ -58,8 +57,12 @@ public:
     bool CreateProcess();
     
 public:
-    UFUNCTION(BlueprintCallable, DisplayName="发送消息")
-    bool SendMessageToClient(const FString& Message);
+    UFUNCTION(BlueprintCallable, DisplayName="发送消息（字符串）")
+    bool SendMessageToClient_String(const FString& Message);
+
+    UFUNCTION(BlueprintCallable, DisplayName="发送消息（字节）")
+    bool SendMessageToClient_Byte(TArray<uint8> Message);
+
     UFUNCTION(BlueprintCallable, DisplayName="接受消息")
     void ReceiveMessageFromClient();
 

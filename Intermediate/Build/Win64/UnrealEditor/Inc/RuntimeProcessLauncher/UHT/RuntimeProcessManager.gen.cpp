@@ -99,12 +99,20 @@ void FOnMessageReceived_DelegateWrapper(const FMulticastScriptDelegate& OnMessag
 		P_THIS->ReceiveMessageFromClient();
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(URuntimeProcessManager::execSendMessageToClient)
+	DEFINE_FUNCTION(URuntimeProcessManager::execSendMessageToClient_Byte)
+	{
+		P_GET_TARRAY(uint8,Z_Param_Message);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(bool*)Z_Param__Result=P_THIS->SendMessageToClient_Byte(Z_Param_Message);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(URuntimeProcessManager::execSendMessageToClient_String)
 	{
 		P_GET_PROPERTY(FStrProperty,Z_Param_Message);
 		P_FINISH;
 		P_NATIVE_BEGIN;
-		*(bool*)Z_Param__Result=P_THIS->SendMessageToClient(Z_Param_Message);
+		*(bool*)Z_Param__Result=P_THIS->SendMessageToClient_String(Z_Param_Message);
 		P_NATIVE_END;
 	}
 	void URuntimeProcessManager::StaticRegisterNativesURuntimeProcessManager()
@@ -112,7 +120,8 @@ void FOnMessageReceived_DelegateWrapper(const FMulticastScriptDelegate& OnMessag
 		UClass* Class = URuntimeProcessManager::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "ReceiveMessageFromClient", &URuntimeProcessManager::execReceiveMessageFromClient },
-			{ "SendMessageToClient", &URuntimeProcessManager::execSendMessageToClient },
+			{ "SendMessageToClient_Byte", &URuntimeProcessManager::execSendMessageToClient_Byte },
+			{ "SendMessageToClient_String", &URuntimeProcessManager::execSendMessageToClient_String },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -139,9 +148,54 @@ void FOnMessageReceived_DelegateWrapper(const FMulticastScriptDelegate& OnMessag
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics
+	struct Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics
 	{
-		struct RuntimeProcessManager_eventSendMessageToClient_Parms
+		struct RuntimeProcessManager_eventSendMessageToClient_Byte_Parms
+		{
+			TArray<uint8> Message;
+			bool ReturnValue;
+		};
+		static const UECodeGen_Private::FBytePropertyParams NewProp_Message_Inner;
+		static const UECodeGen_Private::FArrayPropertyParams NewProp_Message;
+		static void NewProp_ReturnValue_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FBytePropertyParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_Message_Inner = { "Message", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FArrayPropertyParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(RuntimeProcessManager_eventSendMessageToClient_Byte_Parms, Message), EArrayPropertyFlags::None, METADATA_PARAMS(nullptr, 0) };
+	void Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	{
+		((RuntimeProcessManager_eventSendMessageToClient_Byte_Parms*)Obj)->ReturnValue = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(RuntimeProcessManager_eventSendMessageToClient_Byte_Parms), &Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_Message_Inner,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_Message,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::Function_MetaDataParams[] = {
+		{ "DisplayName", "\xe5\x8f\x91\xe9\x80\x81\xe6\xb6\x88\xe6\x81\xaf\xef\xbc\x88\xe5\xad\x97\xe8\x8a\x82\xef\xbc\x89" },
+		{ "ModuleRelativePath", "Public/RuntimeProcessManager.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URuntimeProcessManager, nullptr, "SendMessageToClient_Byte", nullptr, nullptr, sizeof(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::RuntimeProcessManager_eventSendMessageToClient_Byte_Parms), Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics
+	{
+		struct RuntimeProcessManager_eventSendMessageToClient_String_Parms
 		{
 			FString Message;
 			bool ReturnValue;
@@ -159,33 +213,33 @@ void FOnMessageReceived_DelegateWrapper(const FMulticastScriptDelegate& OnMessag
 		static const UECodeGen_Private::FFunctionParams FuncParams;
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_Message_MetaData[] = {
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_Message_MetaData[] = {
 		{ "NativeConst", "" },
 	};
 #endif
-	const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(RuntimeProcessManager_eventSendMessageToClient_Parms, Message), METADATA_PARAMS(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_Message_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_Message_MetaData)) };
-	void Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+	const UECodeGen_Private::FStrPropertyParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_Message = { "Message", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, STRUCT_OFFSET(RuntimeProcessManager_eventSendMessageToClient_String_Parms, Message), METADATA_PARAMS(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_Message_MetaData, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_Message_MetaData)) };
+	void Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_ReturnValue_SetBit(void* Obj)
 	{
-		((RuntimeProcessManager_eventSendMessageToClient_Parms*)Obj)->ReturnValue = 1;
+		((RuntimeProcessManager_eventSendMessageToClient_String_Parms*)Obj)->ReturnValue = 1;
 	}
-	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(RuntimeProcessManager_eventSendMessageToClient_Parms), &Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
-	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::PropPointers[] = {
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_Message,
-		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::NewProp_ReturnValue,
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, nullptr, nullptr, sizeof(bool), sizeof(RuntimeProcessManager_eventSendMessageToClient_String_Parms), &Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(nullptr, 0) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_Message,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::NewProp_ReturnValue,
 	};
 #if WITH_METADATA
-	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::Function_MetaDataParams[] = {
-		{ "DisplayName", "\xe5\x8f\x91\xe9\x80\x81\xe6\xb6\x88\xe6\x81\xaf" },
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::Function_MetaDataParams[] = {
+		{ "DisplayName", "\xe5\x8f\x91\xe9\x80\x81\xe6\xb6\x88\xe6\x81\xaf\xef\xbc\x88\xe5\xad\x97\xe7\xac\xa6\xe4\xb8\xb2\xef\xbc\x89" },
 		{ "ModuleRelativePath", "Public/RuntimeProcessManager.h" },
 	};
 #endif
-	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URuntimeProcessManager, nullptr, "SendMessageToClient", nullptr, nullptr, sizeof(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::RuntimeProcessManager_eventSendMessageToClient_Parms), Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient()
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_URuntimeProcessManager, nullptr, "SendMessageToClient_String", nullptr, nullptr, sizeof(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::RuntimeProcessManager_eventSendMessageToClient_String_Parms), Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String()
 	{
 		static UFunction* ReturnFunction = nullptr;
 		if (!ReturnFunction)
 		{
-			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Statics::FuncParams);
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -219,7 +273,8 @@ void FOnMessageReceived_DelegateWrapper(const FMulticastScriptDelegate& OnMessag
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_URuntimeProcessManager_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_URuntimeProcessManager_ReceiveMessageFromClient, "ReceiveMessageFromClient" }, // 1916583315
-		{ &Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient, "SendMessageToClient" }, // 36605555
+		{ &Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_Byte, "SendMessageToClient_Byte" }, // 919599042
+		{ &Z_Construct_UFunction_URuntimeProcessManager_SendMessageToClient_String, "SendMessageToClient_String" }, // 739380957
 	};
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_URuntimeProcessManager_Statics::Class_MetaDataParams[] = {
@@ -283,9 +338,9 @@ void FOnMessageReceived_DelegateWrapper(const FMulticastScriptDelegate& OnMessag
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_URuntimeProcessManager, URuntimeProcessManager::StaticClass, TEXT("URuntimeProcessManager"), &Z_Registration_Info_UClass_URuntimeProcessManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URuntimeProcessManager), 1529426940U) },
+		{ Z_Construct_UClass_URuntimeProcessManager, URuntimeProcessManager::StaticClass, TEXT("URuntimeProcessManager"), &Z_Registration_Info_UClass_URuntimeProcessManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(URuntimeProcessManager), 3780495026U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_4178743580(TEXT("/Script/RuntimeProcessLauncher"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_913270289(TEXT("/Script/RuntimeProcessLauncher"),
 		Z_CompiledInDeferFile_FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -30,7 +30,6 @@ URuntimeProcessLauncher& URuntimeProcessLauncher::Get()
     if (!Instance)
     {
         Instance = NewObject<URuntimeProcessLauncher>();
-        Instance->AddToRoot(); // 防止被垃圾回收
     }
 
     return *Instance;
@@ -41,20 +40,29 @@ URuntimeProcessLauncher::URuntimeProcessLauncher()
 
 }
 
+
+URuntimeProcessLauncher::~URuntimeProcessLauncher()
+{
+    for (int32 i = ProcessManagers.Num() - 1; i >= 0; i--)
+    {
+        DestroyProcessManager(ProcessManagers[i]);
+    }
+    ProcessManagers.Empty();
+}
+
 URuntimeProcessManager* URuntimeProcessLauncher::CreateProcessManager(int32 Port, bool IsIndependent, const FString& Url, const FString& Params)
 {
-    FScopeLock Lock(&ProcessManagersLock);
-
     URuntimeProcessManager* NewManager = NewObject<URuntimeProcessManager>();
     NewManager->Init(Port, IsIndependent, Url, Params, L"NewSocketServer");
-    ProcessManagers.Add(NewManager);
+    if (!IsIndependent)
+    {
+        ProcessManagers.Add(NewManager);
+    }
     return NewManager;
 }
 
 void URuntimeProcessLauncher::DestroyProcessManager(URuntimeProcessManager* ProcessManager)
 {
-    FScopeLock Lock(&ProcessManagersLock);
-
     if (ProcessManager && ProcessManagers.Contains(ProcessManager))
     {
         ProcessManagers.Remove(ProcessManager);

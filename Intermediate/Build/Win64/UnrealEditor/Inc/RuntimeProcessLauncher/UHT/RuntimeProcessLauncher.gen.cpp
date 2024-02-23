@@ -76,7 +76,6 @@ void EmptyLinkFunctionForGeneratedCodeRuntimeProcessLauncher() {}
 		return URuntimeProcessLauncher::StaticClass();
 	}
 	DEFINE_VTABLE_PTR_HELPER_CTOR(URuntimeProcessLauncher);
-	URuntimeProcessLauncher::~URuntimeProcessLauncher() {}
 	DEFINE_FUNCTION(URuntimeProcessBlueprintFunctionLibrary::execDestroyProcessManager)
 	{
 		P_GET_OBJECT(URuntimeProcessManager,Z_Param_ProcessManager);

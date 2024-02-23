@@ -26,13 +26,15 @@ RUNTIMEPROCESSLAUNCHER_API void FOnMessageReceived_DelegateWrapper(const FMultic
 #define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_21_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execReceiveMessageFromClient); \
-	DECLARE_FUNCTION(execSendMessageToClient);
+	DECLARE_FUNCTION(execSendMessageToClient_Byte); \
+	DECLARE_FUNCTION(execSendMessageToClient_String);
 
 
 #define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execReceiveMessageFromClient); \
-	DECLARE_FUNCTION(execSendMessageToClient);
+	DECLARE_FUNCTION(execSendMessageToClient_Byte); \
+	DECLARE_FUNCTION(execSendMessageToClient_String);
 
 
 #define FID_XediaDocument_Project_Unreal_5_2_PluginDev_Plugins_RuntimeProcessLauncher_Source_RuntimeProcessLauncher_Public_RuntimeProcessManager_h_21_ACCESSORS

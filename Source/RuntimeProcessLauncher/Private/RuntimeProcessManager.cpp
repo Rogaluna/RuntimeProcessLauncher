@@ -18,7 +18,6 @@ URuntimeProcessManager::URuntimeProcessManager() :
 	SocketPort(0),
     Url(L""),
     Params(L""),
-	IsIndependentProcess(false),
     bReceive(false)
 {
 	
@@ -78,7 +77,7 @@ bool URuntimeProcessManager::CreateProcess()
     return true;
 }
 
-bool URuntimeProcessManager::SendMessageToClient(const FString& Message)
+bool URuntimeProcessManager::SendMessageToClient_String(const FString& Message)
 {
     if (ClientSocket == nullptr)
     {
@@ -92,6 +91,17 @@ bool URuntimeProcessManager::SendMessageToClient(const FString& Message)
 
     int32 BytesSent = 0;
     return ClientSocket->Send(DataToSend.GetData(), DataToSend.Num(), BytesSent);
+}
+
+bool URuntimeProcessManager::SendMessageToClient_Byte(TArray<uint8> Message)
+{
+    if (ClientSocket == nullptr)
+    {
+        return false;
+    }
+
+    int32 BytesSent = 0;
+    return ClientSocket->Send(Message.GetData(), Message.Num(), BytesSent);
 }
 
 void URuntimeProcessManager::ReceiveMessageFromClient()
@@ -160,14 +170,13 @@ void URuntimeProcessManager::DestoryProcess()
 void URuntimeProcessManager::Init(int32 _SocketPort, bool _IsIndependentProcess, const FString& _Url, const FString& _Params, const FString& _SocketName)
 {
     SocketPort = _SocketPort;
-    IsIndependentProcess = _IsIndependentProcess;
 
     Url = _Url;
     Params = _Params;
 
     SocketName = _SocketName;
 
-    if (!IsIndependentProcess)
+    if (!_IsIndependentProcess)
     {
         CreateSocketServer();
     }

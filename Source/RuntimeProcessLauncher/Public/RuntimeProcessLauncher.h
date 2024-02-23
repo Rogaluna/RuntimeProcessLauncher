@@ -29,12 +29,11 @@ public:
 protected:
     static URuntimeProcessLauncher* Instance;
     static FCriticalSection InstanceLock;
-    /** 线程锁，用于保护 ProcessManagers 数组 */
-    FCriticalSection ProcessManagersLock;
 
     // 构造函数
 protected:
     URuntimeProcessLauncher();
+    ~URuntimeProcessLauncher();
 
 public:
     URuntimeProcessManager* CreateProcessManager(int32 Port, bool IsIndependent, const FString& Url, const FString& Params);
